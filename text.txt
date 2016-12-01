@@ -1,3 +1,0 @@
-codepkg/classes/PdfExampleController.cls
-comp2.txt
-text.txt
