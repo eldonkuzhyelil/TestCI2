@@ -12,6 +12,7 @@ public  class PdfExampleController {
     //9
     //10
     //11
+    //12
         accList = new List<Account>();
         accList = [select id,name,type,accountnumber,annualrevenue,Rating from account limit 10];
     
