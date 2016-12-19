@@ -48,9 +48,9 @@ EOF
         echo Creating new package.xml
         echo $NEWPKGXML > $WSPACE/src/package.xml
 		echo 
-        for CFILE in `git diff-tree --no-commit-id --name-only -r head~2`
+        for CFILE in `git diff-tree --no-commit-id --name-only -r head`
 		
-		#git diff-tree --no-commit-id --name-only -r head~2
+		#git diff-tree --no-commit-id --name-only -r head
 		#echo cfile "$CFILE"
         do
                 echo Analyzing file basename $CFILE

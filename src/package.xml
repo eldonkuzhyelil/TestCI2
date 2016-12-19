@@ -4,5 +4,9 @@
     <name>ApexClass</name>
     <members>pdf</members>
   </types>
+  <types>
+    <name>ApexTrigger</name>
+    <members>pdf</members>
+  </types>
   <version>27.0</version>
 </Package>
