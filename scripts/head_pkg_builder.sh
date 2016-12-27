@@ -75,17 +75,19 @@ EOF
                 if [[ "$TYPENAME" != "UNKNOWN TYPE" ]]
                 then
 						#basename $CFILE
-                        set ENTITY=basename "$CFILE"
+
 						echo cfile "$CFILE"
-						set FILE="$CFILE"
+						
+						
+						NOEXTENSION="${CFILE%.*}"
 						
 						#for /F %i in ("c:\foo\pdf.cls") do @echo %~ni
 						#for /F %%i in ("$CFILE") do @echo %%~ni
 						
-						echo ENTITY NAME1: $ENTITY
-                        ENTITY="${ENTITY%.*}"
+						echo NOEXTENSION NAME1: $NOEXTENSION
+                        ENTITY="  ${NOEXTENSION##*"/"}"
 						
-						ENTITY="pdf"
+						
                         echo ENTITY NAME: $ENTITY
 
                         #if grep -Fq "$TYPENAME" $WSPACE/src/package.xml
