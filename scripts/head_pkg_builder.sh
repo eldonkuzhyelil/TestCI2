@@ -24,7 +24,7 @@ cd "D:\Jenkins\workspace\FirstProject\TestCI2"
 
 # check for the existence of an existing commit file for this
 # project
-SCRIPTFILE="D:\Jenkins\workspace\FirstProject\TestCI2\lastcommit\FirstProject.txt"
+SCRIPTFILE="D:\Jenkins\workspace\FirstProject\TestCI2\lastcommit\$BNAME.txt"
 echo Searching for script file $SCRIPTFILE   ...
 if [  $SCRIPTFILE ]
 then
@@ -47,7 +47,7 @@ EOF
         echo $NEWPKGXML
         echo Creating new package.xml
         echo $NEWPKGXML > $WSPACE/src/package.xml
-		echo 
+		
         for CFILE in `git diff-tree --no-commit-id --name-only -r head`
 		
 		#git diff-tree --no-commit-id --name-only -r head
@@ -85,7 +85,7 @@ EOF
 						#for /F %%i in ("$CFILE") do @echo %%~ni
 						
 						echo NOEXTENSION NAME1: $NOEXTENSION
-                        ENTITY="  ${NOEXTENSION##*"/"}"
+                        ENTITY="${NOEXTENSION##*"/"}"
 						
 						
                         echo ENTITY NAME: $ENTITY
@@ -95,7 +95,7 @@ EOF
                         then
 								echo "$TYPENAME" is inside package.xml
                                 echo Generating new member for $ENTITY
-                               xml ed -L -s "/Package/types[name='$TYPENAME']" -t elem -n members -v "$ENTITY" $WSPACE/src/package.xml
+                                xml ed -L -s "/Package/types[name='$TYPENAME']" -t elem -n members -v "$ENTITY" $WSPACE/src/package.xml
                         else
 								
 								echo "$TYPENAME" is NOT inside package.xml
