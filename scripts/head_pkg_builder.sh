@@ -35,7 +35,7 @@ then
         cd $WSPACE/src
         echo changing directoy to $WSPACE
 		
-        xcopy package.xml{,.bak} &&
+        xcopy package.xml{,.bak} /Y &&
         #xcopy "package.xml" "package.xml.bak"
 		echo Backing up package.xml to package.xml.bak &&
         read -d '' NEWPKGXML <<EOF
