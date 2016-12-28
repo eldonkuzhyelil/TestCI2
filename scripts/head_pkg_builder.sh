@@ -91,7 +91,7 @@ EOF
                         echo ENTITY NAME: $ENTITY
 
                         #if grep -Fq "$TYPENAME" $WSPACE/src/package.xml
-						if [ findstr "$TYPENAME" "$WSPACE\src\package.xml"]
+						if  findstr "$TYPENAME" "$WSPACE\src\package.xml"
                         then
 								echo "$TYPENAME" is inside package.xml
                                 echo Generating new member for $ENTITY
