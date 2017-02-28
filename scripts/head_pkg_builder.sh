@@ -2,7 +2,6 @@
 # -bname build name
 # -wspace build workspace dir
 # -lcommit builds last commit
-
 #read command line args
 while getopts b:w:l: option
 do
