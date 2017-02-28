@@ -3,7 +3,7 @@
 # -wspace build workspace dir
 # -lcommit builds last commit
 #read command line args
-
+git pull origin master
 while getopts b:w:l: option
 do
         case "${option}"
